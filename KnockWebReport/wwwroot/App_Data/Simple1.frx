@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" SmoothGraphics="true" ReportInfo.Description="This report demonstrates the PolyLineObject and PolygonObject features." ReportInfo.Created="06/02/2009 00:44:01" ReportInfo.Modified="08/13/2017 00:42:49" ReportInfo.CreatorVersion="1.0.0.0">
+  <Dictionary>
+    <MsAccessDataConnection Name="Connection" ConnectionString="rijcmlqoDWEBRlB24atBGpA/h9/NbwdWKfjN0xexwR499WDO0y7IJqtWaFegHY0F1Ho9V3FR7iHCSAqsYy0Hh3e0+8WAh03u807NrG3H9Eg4RpQx+XAP8hEkI3LaEAZuLMqDyh3+8t1g9iRgnKFxHlHd5UZnA==">
+      <TableDataSource Name="items" DataType="System.Int32" Enabled="true" TableName="items">
+        <Column Name="OrderNo" DataType="System.Double"/>
+        <Column Name="ItemNo" DataType="System.Double"/>
+        <Column Name="PartNo" DataType="System.Double"/>
+        <Column Name="Qty" DataType="System.Int32"/>
+        <Column Name="Discount" DataType="System.Double"/>
+      </TableDataSource>
+    </MsAccessDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="94.5" CanGrow="true">
+      <TextObject Name="Text30" Top="46.25" Width="718.2" Height="28.35" Text="Simple report" HorzAlign="Center" VertAlign="Center" Font="Tahoma, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="98.5" Width="718.2" Height="557.55">
+      <MatrixObject Name="Matrix1" Left="56.7" Top="66.15" Width="171.03" Height="58.68" FixedRows="1" FixedColumns="1" DataSource="items">
+        <MatrixColumns>
+          <Header Expression="[items.ItemNo]"/>
+        </MatrixColumns>
+        <MatrixRows>
+          <Header Expression="[items.OrderNo]"/>
+        </MatrixRows>
+        <MatrixCells>
+          <Cell Expression="[items.Qty]"/>
+        </MatrixCells>
+        <TableColumn Name="Column1" Width="69.72" AutoSize="true"/>
+        <TableColumn Name="Column2" Width="61.33" AutoSize="true"/>
+        <TableColumn Name="Column3" Width="39.98" AutoSize="true"/>
+        <TableRow Name="Row1" Height="19.56" AutoSize="true">
+          <TableCell Name="Cell1" Border.Lines="All" Text="OrderNo" HorzAlign="Center" VertAlign="Center"/>
+          <TableCell Name="Cell2" Border.Lines="All" Text="[ItemNo]" HorzAlign="Center" VertAlign="Center"/>
+          <TableCell Name="Cell7" Border.Lines="All" Text="Total" HorzAlign="Center" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row2" Height="19.56" AutoSize="true">
+          <TableCell Name="Cell3" Border.Lines="All" Text="[OrderNo]" HorzAlign="Center" VertAlign="Center"/>
+          <TableCell Name="Cell4" Border.Lines="All" Text="[Qty]" HorzAlign="Right" VertAlign="Center"/>
+          <TableCell Name="Cell8" Border.Lines="All" HorzAlign="Right" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="19.56" AutoSize="true">
+          <TableCell Name="Cell5" Border.Lines="All" Text="Total" HorzAlign="Center" VertAlign="Center"/>
+          <TableCell Name="Cell6" Border.Lines="All" HorzAlign="Right" VertAlign="Center"/>
+          <TableCell Name="Cell9" Border.Lines="All" HorzAlign="Right" VertAlign="Center"/>
+        </TableRow>
+      </MatrixObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="660.05" Width="718.2" Height="28.35" Fill.Color="WhiteSmoke"/>
+  </ReportPage>
+</Report>
