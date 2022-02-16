@@ -3,6 +3,8 @@ This can be done by using the command in the console: dotnet new --install Micro
 
 Then you need to install NodeJS.  
 
+After cloning the project, go to the folder, run the console there, and enter the command "npm install"
+
 After these steps you can start the project
 
 Also, if you want to learn more about the demo project, check out the article: https://www.fast-report.com/en/blog/show/fastcube-net-in-spa-knockout-application/
